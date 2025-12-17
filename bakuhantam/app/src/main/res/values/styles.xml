@@ -1,0 +1,35 @@
+<resources>
+
+    <!-- THEME UTAMA APLIKASI -->
+    <style name="Theme.BakuHantam" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- warna aksen biru gelap -->
+        <item name="colorPrimary">@color/primary_blue</item>
+        <item name="colorPrimaryVariant">@color/primary_blue_dark</item>
+        <item name="colorOnPrimary">@android:color/white</item>
+
+        <item name="colorSecondary">@color/primary_blue</item>
+        <item name="colorSecondaryVariant">@color/primary_blue_dark</item>
+        <item name="colorOnSecondary">@android:color/white</item>
+
+        <!-- status bar -->
+        <item name="android:statusBarColor">@color/bg_end</item>
+        <item name="android:navigationBarColor">@color/bg_end</item>
+    </style>
+
+    <!-- STYLE GLOBAL CARD -->
+    <style name="AppCard">
+        <item name="cardCornerRadius">18dp</item>
+        <item name="cardElevation">10dp</item>
+        <item name="cardUseCompatPadding">true</item>
+        <item name="cardBackgroundColor">@color/card_soft</item>
+    </style>
+
+    <!-- STYLE GLOBAL BUTTON -->
+    <style name="AppButtonRed">
+        <item name="android:background">@drawable/btn_red_state</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_height">48dp</item>
+    </style>
+
+</resources>

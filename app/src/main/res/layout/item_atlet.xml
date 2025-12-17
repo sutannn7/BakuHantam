@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/AppCard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="14dp"
+        android:gravity="center_vertical">
+
+        <!-- Avatar -->
+        <FrameLayout
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:background="@drawable/circle_dark">
+
+            <TextView
+                android:id="@+id/tvAvatar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="A"
+                android:textStyle="bold"
+                android:textColor="@color/text_on_dark"/>
+        </FrameLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="12dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvNama"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nama Atlet"
+                android:textStyle="bold"
+                android:textSize="15sp"
+                android:textColor="@color/text_main"/>
+
+            <TextView
+                android:id="@+id/tvSub"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="NIM • Prodi • Kelas"
+                android:textSize="12sp"
+                android:textColor="@color/text_sub"
+                android:layout_marginTop="3dp"/>
+
+            <TextView
+                android:id="@+id/tvStat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Poin • W/L/D • Match"
+                android:textSize="12sp"
+                android:textColor="@color/text_sub"
+                android:layout_marginTop="6dp"/>
+        </LinearLayout>
+
+        <!-- Chevron -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="›"
+            android:textSize="26sp"
+            android:textColor="@color/text_sub"
+            android:paddingStart="8dp"/>
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

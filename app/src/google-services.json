@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "471443911200",
+    "project_id": "bakuhantam-b9b48",
+    "storage_bucket": "bakuhantam-b9b48.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:471443911200:android:97919753974667f7808245",
+        "android_client_info": {
+          "package_name": "BakuHantam.com"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAxNE5YgPArbEEznOOk0uqE-iOGy1U4ZKk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

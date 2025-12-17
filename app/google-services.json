@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "839393109122",
+    "project_id": "bakuhantam-3d64d",
+    "storage_bucket": "bakuhantam-3d64d.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:839393109122:android:0c5c901cd23ecc1314c09b",
+        "android_client_info": {
+          "package_name": "com.polsri.bakuhantam"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6SU3RqXPxUltLvU8To8V7I3gcIss79s8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

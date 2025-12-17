@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BakuHantam</string>
+
+    <!-- Text contoh yang sudah ada -->
+    <!-- Opsi 1: Menggunakan backslash -->
+    <string name="welcome_message">It\'s a new day!</string>
+
+    <!-- Opsi 2: Menggunakan kutip dua untuk membungkus string -->
+    <string name="welcome_message_alt">"It's a new day!"</string>
+
+    <!-- Perbaiki karakter '&' -->
+    <string name="promo">Diskon 50% &amp; bonus lainnya!</string>
+
+    <!-- ✅ Tambahan untuk bottom_nav_menu -->
+    <string name="home">Home</string>
+    <string name="leaderboard">Leaderboard</string>
+    <string name="history">History</string>
+    <string name="profile">Profile</string>
+</resources>

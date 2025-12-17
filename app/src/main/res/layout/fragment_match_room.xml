@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:background="@drawable/bg_gradient">
+
+        <TextView
+            android:id="@+id/tvHeader"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Match Room"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="@color/text_on_dark"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:id="@+id/tvRoundState"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="RONDE 1"
+            android:textSize="13sp"
+            android:textColor="@color/text_on_dark_sub"
+            android:layout_marginTop="4dp"
+            app:layout_constraintTop_toBottomOf="@id/tvHeader"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <!-- ===== Match Info Card ===== -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardMatchInfo"
+            style="@style/AppCard"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:layout_constraintTop_toBottomOf="@id/tvRoundState"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="14dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/tvAtletA"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Atlet A"
+                        android:textStyle="bold"
+                        android:textSize="15sp"
+                        android:textColor="@color/text_main"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="VS"
+                        android:textStyle="bold"
+                        android:textColor="@color/text_sub"
+                        android:layout_marginHorizontal="10dp"/>
+
+                    <TextView
+                        android:id="@+id/tvAtletB"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="end"
+                        android:text="Atlet B"
+                        android:textStyle="bold"
+                        android:textSize="15sp"
+                        android:textColor="@color/text_main"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="12dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Timer:"
+                        android:textStyle="bold"
+                        android:textColor="@color/text_sub"/>
+
+                    <TextView
+                        android:id="@+id/tvTimer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="03:00"
+                        android:textStyle="bold"
+                        android:textSize="18sp"
+                        android:textColor="@color/text_main"
+                        android:layout_marginStart="10dp"/>
+
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1"/>
+
+                    <Button
+                        android:id="@+id/btnStartPause"
+                        style="@style/AppButtonPrimary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="START"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvRoundScore"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="R1: 0-0 | R2: 0-0 | R3: 0-0"
+                    android:textColor="@color/text_sub"/>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- ===== Score Card ===== -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardScore"
+            style="@style/AppCard"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:layout_constraintTop_toBottomOf="@id/cardMatchInfo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="14dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Skor"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:textColor="@color/text_main"/>
+
+                <TextView
+                    android:id="@+id/tvScore"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="0 - 0"
+                    android:textStyle="bold"
+                    android:textSize="28sp"
+                    android:textColor="@color/text_main"
+                    android:gravity="center"
+                    android:layout_marginTop="8dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:weightSum="2">
+
+                    <Button
+                        android:id="@+id/btnPlusA"
+                        style="@style/AppButtonPrimary"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="+ A"/>
+
+                    <Space
+                        android:layout_width="8dp"
+                        android:layout_height="1dp"/>
+
+                    <Button
+                        android:id="@+id/btnPlusB"
+                        style="@style/AppButtonPrimary"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="+ B"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="8dp"
+                    android:weightSum="2">
+
+                    <Button
+                        android:id="@+id/btnResetTimer"
+                        style="@style/AppButtonSecondary"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="RESET"/>
+
+                    <Space
+                        android:layout_width="8dp"
+                        android:layout_height="1dp"/>
+
+                    <Button
+                        android:id="@+id/btnNextPhase"
+                        style="@style/AppButtonSecondary"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="NEXT"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="8dp"
+                    android:weightSum="2">
+
+                    <Button
+                        android:id="@+id/btnUndo"
+                        style="@style/AppButtonSecondary"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="UNDO"
+                        android:enabled="false"/>
+
+                    <Space
+                        android:layout_width="8dp"
+                        android:layout_height="1dp"/>
+
+                    <Button
+                        android:id="@+id/btnSummary"
+                        style="@style/AppButtonSecondary"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="SUMMARY"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- ===== Discipline Card ===== -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardDiscipline"
+            style="@style/AppCard"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:layout_constraintTop_toBottomOf="@id/cardScore"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="14dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Peringatan &amp; Pelanggaran"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:textColor="@color/text_main"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="10dp"
+                    android:weightSum="2">
+
+                    <Button
+                        android:id="@+id/btnWarningA"
+                        style="@style/AppButtonSecondary"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="⚠ A (0)"/>
+
+                    <Space
+                        android:layout_width="8dp"
+                        android:layout_height="1dp"/>
+
+                    <Button
+                        android:id="@+id/btnWarningB"
+                        style="@style/AppButtonSecondary"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="⚠ B (0)"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="8dp"
+                    android:weightSum="2">
+
+                    <Button
+                        android:id="@+id/btnFoulA"
+                        style="@style/AppButtonSecondary"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="❌ A (0)"/>
+
+                    <Space
+                        android:layout_width="8dp"
+                        android:layout_height="1dp"/>
+
+                    <Button
+                        android:id="@+id/btnFoulB"
+                        style="@style/AppButtonSecondary"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="❌ B (0)"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- ===== Result Card ===== -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardResult"
+            style="@style/AppCard"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            app:layout_constraintTop_toBottomOf="@id/cardDiscipline"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="14dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hasil"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:textColor="@color/text_main"/>
+
+                <RadioGroup
+                    android:id="@+id/rgWinner"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/rbA"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="A"/>
+
+                    <RadioButton
+                        android:id="@+id/rbB"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:text="B"/>
+
+                    <RadioButton
+                        android:id="@+id/rbSeri"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:text="Seri"/>
+                </RadioGroup>
+
+                <EditText
+                    android:id="@+id/etCatatan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:hint="Catatan wasit..."
+                    android:minLines="2"/>
+
+                <Button
+                    android:id="@+id/btnSimpanHasil"
+                    style="@style/AppButtonRed"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="SELESAI &amp; SIMPAN"
+                    android:layout_marginTop="10dp"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.core.widget.NestedScrollView>
+
+
+    <!-- ===== Header ===== -->

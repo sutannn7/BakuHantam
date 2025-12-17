@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Example colors -->
+    <color name="primary_blue">#007BFF</color>
+    <color name="primary_blue_dark">#0056B3</color>
+
+    <!-- Basic colors -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- BACKGROUND GELAP (ARENA) -->
+    <color name="bg_start">#120C10</color>
+    <color name="bg_center">#0B1526</color>
+    <color name="bg_end">#050B18</color>
+
+    <!-- CIRCLE AVATAR -->
+    <color name="circle_color">#0B1526</color>
+
+    <!-- CARD & INPUT -->
+    <color name="card_soft">#F8F9FB</color>
+    <color name="input_gray">#F4F4F6</color>
+
+    <!-- ✅ FIX: tint harus hex atau reference -->
+    <color name="tint">@color/white</color>
+
+    <!-- TEXT -->
+    <color name="text_main">#222222</color>
+    <color name="text_sub">#444444</color>
+
+</resources>

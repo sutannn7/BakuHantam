@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BakuHantam</string>
+
+    <!-- Bottom nav -->
+    <string name="home">Home</string>
+    <string name="leaderboard">Leaderboard</string>
+    <string name="history">History</string>
+    <string name="profile">Profile</string>
+
+    <!-- Common UI -->
+    <string name="search_hint">Cari nama / NIM…</string>
+    <string name="empty_atlet">Belum ada atlet.</string>
+    <string name="btn_save">Simpan</string>
+    <string name="btn_update">Update</string>
+    <string name="btn_delete">Hapus</string>
+
+    <!-- Profile Page -->
+    <string name="profile_edit">Edit</string>
+    <string name="profile_title">BakuHantam</string>
+    <string name="profile_email_default">contact@bakuhantam.com</string>
+    <string name="profile_menu_my_profile">My Profile</string>
+    <string name="profile_menu_settings">Settings</string>
+    <string name="profile_menu_terms">Terms &amp; Privacy Policy</string>
+    <string name="profile_menu_logout">Logout</string>
+    <string name="profile_login_prompt">Login untuk Melihat Profil</string>
+    <string name="profile_section_stats">📊 Statistik</string>
+    <string name="profile_section_achievements">🏅 Achievement</string>
+    <string name="profile_default_achievement">Mulai buat match pertamamu!</string>
+
+    <!-- Example (boleh dihapus kalau tidak dipakai) -->
+    <string name="promo">Diskon 50% &amp; bonus lainnya!</string>
+    <string name="atlet_a_button">A: %1$s</string>
+    <string name="atlet_b_button">B: %1$s</string>
+    <string name="wasit_button">Wasit: %1$s</string>
+</resources>

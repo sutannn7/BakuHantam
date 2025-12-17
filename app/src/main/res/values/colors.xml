@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Brand / Accent (kamu sekarang pakai biru) -->
+    <color name="primary_blue">#1E88E5</color>
+    <color name="primary_blue_dark">#1565C0</color>
+
+    <!-- Basic -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Background gelap (arena) - tetap konsep kamu -->
+    <color name="bg_start">#120C10</color>
+    <color name="bg_center">#0B1526</color>
+    <color name="bg_end">#050B18</color>
+
+    <!-- Surface / Card di atas bg gelap -->
+    <color name="surface_dark">#0F1A2D</color>
+    <color name="card_soft">#F8F9FB</color>
+
+    <!-- Input -->
+    <color name="input_gray">#F4F4F6</color>
+    <color name="divider">#E6E8EE</color>
+
+    <!-- Avatar circle -->
+    <color name="circle_color">#0B1526</color>
+
+    <!-- Text (buat card putih) -->
+    <color name="text_main">#222222</color>
+    <color name="text_sub">#666A73</color>
+
+    <!-- Text (buat area gelap) -->
+    <color name="text_on_dark">#FFFFFF</color>
+    <color name="text_on_dark_sub">#B7C0D1</color>
+
+    <!-- Tint -->
+    <color name="tint">@color/white</color>
+
+    <!-- Danger / Red action -->
+    <color name="danger_red">#E53935</color>
+    <color name="danger_red_dark">#C62828</color>
+
+</resources>

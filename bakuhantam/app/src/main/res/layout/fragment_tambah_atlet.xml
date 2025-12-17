@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardTambahAtlet"
+        style="@style/AppCard"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="85dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp"
+                android:paddingTop="55dp">
+
+                <ImageView
+                    android:id="@+id/imgFoto"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/ic_person"/>
+
+                <Button
+                    android:id="@+id/btnPickFoto"
+                    style="@style/AppButtonRed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="44dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="8dp"
+                    android:text="PILIH FOTO"/>
+
+                <EditText
+                    android:id="@+id/etNama"
+                    android:hint="Nama"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@drawable/box_gray"
+                    android:padding="12dp"/>
+
+                <EditText
+                    android:id="@+id/etNIM"
+                    android:hint="NIM"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/box_gray"
+                    android:padding="12dp"/>
+
+                <EditText
+                    android:id="@+id/etProdi"
+                    android:hint="Prodi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/box_gray"
+                    android:padding="12dp"/>
+
+                <EditText
+                    android:id="@+id/etTahun"
+                    android:hint="Tahun Masuk"
+                    android:inputType="number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/box_gray"
+                    android:padding="12dp"/>
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp">
+
+                    <EditText
+                        android:id="@+id/etBerat"
+                        android:hint="Berat (kg)"
+                        android:inputType="numberDecimal"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/box_gray"
+                        android:padding="12dp"/>
+
+                    <Space android:layout_width="8dp" android:layout_height="1dp"/>
+
+                    <EditText
+                        android:id="@+id/etTinggi"
+                        android:hint="Tinggi (cm)"
+                        android:inputType="numberDecimal"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/box_gray"
+                        android:padding="12dp"/>
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/etPengalaman"
+                    android:hint="Pengalaman (tahun)"
+                    android:inputType="number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/box_gray"
+                    android:padding="12dp"/>
+
+                <EditText
+                    android:id="@+id/etCedera"
+                    android:hint="Riwayat Cedera (opsional)"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@drawable/box_gray"
+                    android:padding="12dp"/>
+
+                <Button
+                    android:id="@+id/btnSimpan"
+                    style="@style/AppButtonRed"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:text="SIMPAN"
+                    android:layout_marginTop="12dp"/>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </androidx.cardview.widget.CardView>
+
+    <FrameLayout
+        android:layout_width="78dp"
+        android:layout_height="78dp"
+        android:background="@drawable/circle_dark"
+        android:elevation="12dp"
+        app:layout_constraintTop_toTopOf="@id/cardTambahAtlet"
+        app:layout_constraintStart_toStartOf="@id/cardTambahAtlet"
+        app:layout_constraintEnd_toEndOf="@id/cardTambahAtlet"
+        android:translationY="-39dp">
+
+        <ImageView
+            android:layout_width="38dp"
+            android:layout_height="38dp"
+            android:layout_gravity="center"
+            android:tint="@android:color/white"
+            android:src="@drawable/ic_person"/>
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/tvLiveTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="LIVE"
+        android:textStyle="bold"
+        android:textSize="22sp"
+        android:textColor="@color/text_on_dark"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/tvLiveSub"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Lanjutkan pertandingan terakhir atau buat match baru"
+        android:textColor="@color/text_on_dark_sub"
+        android:layout_marginTop="6dp"
+        app:layout_constraintTop_toBottomOf="@id/tvLiveTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- CARD: Match terakhir -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardLastMatch"
+        style="@style/AppCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        app:layout_constraintTop_toBottomOf="@id/tvLiveSub"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/tvLastMatchBadge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🔴 Terakhir Dibuka"
+                android:textStyle="bold"
+                android:textColor="@color/text_main"/>
+
+            <TextView
+                android:id="@+id/tvLastMatchInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Belum ada match yang dibuka."
+                android:textColor="@color/text_sub"/>
+
+            <Button
+                android:id="@+id/btnResume"
+                style="@style/AppButtonPrimary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="RESUME"
+                android:enabled="false"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <!-- QUICK ACTIONS -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardQuick"
+        style="@style/AppCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        app:layout_constraintTop_toBottomOf="@id/cardLastMatch"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Aksi Cepat"
+                android:textStyle="bold"
+                android:textColor="@color/text_main"/>
+
+            <Button
+                android:id="@+id/btnBuatMatch"
+                style="@style/AppButtonSecondary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="BUAT MATCH" />
+
+            <Button
+                android:id="@+id/btnKeHome"
+                style="@style/AppButtonSecondary"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="KEMBALI KE HOME" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

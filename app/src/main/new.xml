@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" android:id="@+id/nav_graph" app:startDestination="@id/buatPertandinganFragment">
+
+    <!-- This is your source fragment -->
+    <fragment android:id="@+id/buatPertandinganFragment" android:name="com.polsri.bakuhantam.ui.pertandingan.BuatPertandinganFragment"
+        android:label="fragment_buat_pertandingan" tools:layout="@layout/fragment_buat_pertandingan">
+
+        <!--
+            THIS IS THE ACTION YOU NEED TO ADD.
+            It defines the navigation path from BuatPertandinganFragment to MatchRoomFragment.
+            -->
+        <action android:id="@+id/action_buatPertandinganFragment_to_matchRoomFragment"
+            app:destination="@id/matchRoomFragment" />
+
+    </fragment>
+
+    <!-- This is your destination fragment -->
+    <fragment android:id="@+id/matchRoomFragment" android:name="com.polsri.bakuhantam.ui.pertandingan.MatchRoomFragment"
+        android:label="fragment_match_room" tools:layout="@layout/fragment_match_room">
+
+        <!-- This argument is expected by the action you created -->
+        <argument android:name="pertandinganId" app:argType="long" />
+
+    </fragment>
+
+</navigation>
+    

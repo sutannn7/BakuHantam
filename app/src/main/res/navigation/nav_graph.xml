@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <!-- HOME -->
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.polsri.bakuhantam.ui.home.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/action_homeFragment_to_tambahAtletFragment"
+            app:destination="@id/tambahAtletFragment" />
+
+        <action
+            android:id="@+id/action_homeFragment_to_buatPertandinganFragment"
+            app:destination="@id/buatPertandinganFragment" />
+
+        <action
+            android:id="@+id/action_homeFragment_to_historyFragment"
+            app:destination="@id/historyFragment" />
+
+        <action
+            android:id="@+id/action_homeFragment_to_leaderboardFragment"
+            app:destination="@id/leaderboardFragment" />
+
+        <action
+            android:id="@+id/action_homeFragment_to_atletListFragment"
+            app:destination="@id/atletListFragment" />
+
+        <action
+            android:id="@+id/action_homeFragment_to_liveFragment"
+            app:destination="@id/liveFragment" />
+
+    </fragment>
+
+    <!-- LIVE -->
+    <fragment
+        android:id="@+id/liveFragment"
+        android:name="com.polsri.bakuhantam.ui.live.LiveFragment"
+        android:label="Live"
+        tools:layout="@layout/fragment_live" />
+
+    <!-- LEADERBOARD -->
+    <fragment
+        android:id="@+id/leaderboardFragment"
+        android:name="com.polsri.bakuhantam.ui.leaderboard.LeaderboardFragment"
+        android:label="Leaderboard"
+        tools:layout="@layout/fragment_leaderboard" />
+
+    <!-- HISTORY -->
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="com.polsri.bakuhantam.ui.history.HistoryFragment"
+        android:label="History"
+        tools:layout="@layout/fragment_history" />
+
+    <!-- PROFILE FLOW -->
+    <navigation android:id="@+id/profile_flow" app:startDestination="@id/profileDispatcherFragment">
+
+        <fragment
+            android:id="@+id/profileDispatcherFragment"
+            android:name="com.polsri.bakuhantam.ui.profile.ProfileDispatcherFragment"
+            android:label="ProfileDispatcher">
+            <action
+                android:id="@+id/action_profileDispatcherFragment_to_profileFragment"
+                app:destination="@id/profileFragment"
+                app:popUpTo="@id/profileDispatcherFragment"
+                app:popUpToInclusive="true" />
+            <action
+                android:id="@+id/action_profileDispatcherFragment_to_loginFragment"
+                app:destination="@id/loginFragment"
+                app:popUpTo="@id/profileDispatcherFragment"
+                app:popUpToInclusive="true" />
+        </fragment>
+
+        <fragment
+            android:id="@+id/loginFragment"
+            android:name="com.polsri.bakuhantam.ui.profile.LoginFragment"
+            android:label="Login"
+            tools:layout="@layout/fragment_login">
+            <action
+                android:id="@+id/action_loginFragment_to_profileFragment"
+                app:destination="@+id/profileFragment"
+                app:popUpTo="@+id/loginFragment"
+                app:popUpToInclusive="true" />
+        </fragment>
+
+        <fragment
+            android:id="@+id/profileFragment"
+            android:name="com.polsri.bakuhantam.ui.profile.ProfileFragment"
+            android:label="Profile"
+            tools:layout="@layout/fragment_profile" />
+
+    </navigation>
+
+    <!-- ATLET -->
+    <fragment
+        android:id="@+id/atletListFragment"
+        android:name="com.polsri.bakuhantam.ui.atlet.AtletListFragment"
+        android:label="Daftar Atlet"
+        tools:layout="@layout/fragment_atlet_list" />
+
+    <fragment
+        android:id="@+id/atletDetailFragment"
+        android:name="com.polsri.bakuhantam.ui.atlet.AtletDetailFragment"
+        android:label="Detail Atlet"
+        tools:layout="@layout/fragment_atlet_details" />
+
+    <fragment
+        android:id="@+id/tambahAtletFragment"
+        android:name="com.polsri.bakuhantam.ui.atlet.TambahAtletFragment"
+        android:label="Tambah Atlet"
+        tools:layout="@layout/fragment_tambah_atlet" />
+
+    <!-- PERTANDINGAN -->
+    <fragment
+        android:id="@+id/buatPertandinganFragment"
+        android:name="com.polsri.bakuhantam.ui.pertandingan.BuatPertandinganFragment"
+        android:label="Buat Pertandingan"
+        tools:layout="@layout/fragment_buat_pertandingan" />
+
+    <fragment
+        android:id="@+id/matchRoomFragment"
+        android:name="com.polsri.bakuhantam.ui.pertandingan.MatchRoomFragment"
+        android:label="Match Room"
+        tools:layout="@layout/fragment_match_room">
+
+        <action
+            android:id="@+id/action_matchRoomFragment_to_matchSummaryFragment"
+            app:destination="@+id/matchSummaryFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/matchSummaryFragment"
+        android:name="com.polsri.bakuhantam.ui.pertandingan.MatchSummaryFragment"
+        android:label="Match Summary"
+        tools:layout="@layout/fragment_match_summary" />
+
+</navigation>
